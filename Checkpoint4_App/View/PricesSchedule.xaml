@@ -8,6 +8,12 @@
         mc:Ignorable="d"
         Title="Prices and Schedule" Height="500" Width="800" Background="Beige">
     <Grid>
+        <Grid.Resources>
+            <Style x:Key="TitleStyle">
+                <Setter Property="TextBlock.FontFamily" Value="Amatic SC"/>
+                <Setter Property="TextBlock.FontWeight" Value="Bold"/>
+            </Style>
+        </Grid.Resources>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="17*"/>
             <ColumnDefinition Width="247*"/>
@@ -19,8 +25,8 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Column="1">
-            <Label Content="Wild Circus" FontSize="50" HorizontalContentAlignment="Center" Grid.Row="0" Grid.RowSpan="2" Grid.Column="1"/>
-            <Label Content="Prices and Schedule" FontSize="20" HorizontalContentAlignment="Center" Grid.Row="0"/>
+            <Label Content="Wild Circus" FontSize="60" HorizontalContentAlignment="Center" Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Style="{StaticResource TitleStyle}"/>
+            <Label Content="Prices and Schedule" FontSize="30" HorizontalContentAlignment="Center" Grid.Row="0" Style="{StaticResource TitleStyle}"/>
         </StackPanel>
         <StackPanel Grid.RowSpan ="3">
             <TextBlock Background="IndianRed" Height="472" >
@@ -45,32 +51,32 @@
                 <ColumnDefinition Width="21*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="34*"/>
-                <RowDefinition Height="57*"/>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="51*"/>
                 <RowDefinition Height="56*"/>
                 <RowDefinition Height="56*"/>
                 <RowDefinition Height="76*"/>
             </Grid.RowDefinitions>
-            <Label Content="Prices" FontWeight="Bold" Grid.ColumnSpan="2" FontSize="18"/>
-            <Separator VerticalAlignment="Bottom" Grid.ColumnSpan="7" Margin="0,5,0,0"/>
-            <Label Content="Adults" FontWeight="Bold" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Margin="3,19,13,12" Width="54"/>
-            <TextBlock Text="10 euros" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Margin="11,20,13,20" Width="46"/>
-            <TextBlock Text="15 euros" Grid.Column="2" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Margin="11,20,13,20" Width="46"/>
-            <Label Content="Children under 12" FontWeight="Bold" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Margin="0,19,0,12" Width="114"/>
-            <TextBlock Text="5 euros" Grid.Column="3" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Margin="37,20" Width="40"/>
-            <TextBlock Text="6 euros" Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Margin="37,20" Width="40"/>
-            <TextBlock Text="Groups (more than 10 people)" TextBlock.TextAlignment="Center" TextWrapping="Wrap" FontWeight="Bold" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Height="47" Margin="0,10,0,0" Width="160"/>
-            <TextBlock Text="7 euros by person" Grid.Column="4" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Margin="31,20,33,20" Width="96"/>
-            <TextBlock Text="8 euros by person" Grid.Column="4" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Margin="31,20,33,20" Width="96"/>
-            <Label Content="Schools" Grid.Row="1" FontWeight="Bold" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Margin="31,19,20,12" Width="56"/>
+            <Label Content="Prices" FontWeight="Bold" Grid.ColumnSpan="2" FontSize="25" Style="{StaticResource TitleStyle}"/>
+            <Separator VerticalAlignment="Bottom" Grid.ColumnSpan="7" Margin="0" Height="1"/>
+            <Label Content="Adults" FontWeight="Bold" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Margin="2,16,13,9" Width="54"/>
+            <TextBlock Text="10 euros" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Margin="10,20,13,20" Width="46"/>
+            <TextBlock Text="15 euros" Grid.Column="2" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Margin="10,20,13,20" Width="46"/>
+            <Label Content="Children under 12" FontWeight="Bold" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Margin="68,16,0,9" Width="114" Grid.ColumnSpan="2"/>
+            <TextBlock Text="5 euros" Grid.Column="3" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Margin="37,20,36,20" Width="40"/>
+            <TextBlock Text="6 euros" Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Margin="37,20,36,20" Width="40"/>
+            <TextBlock Text="Groups (more than 10 people)" TextBlock.TextAlignment="Center" TextWrapping="Wrap" FontWeight="Bold" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Height="46" Margin="0,8,105,53" Width="160" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+            <TextBlock Text="7 euros by person" Grid.Column="4" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Margin="30,20,33,20" Width="96"/>
+            <TextBlock Text="8 euros by person" Grid.Column="4" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Margin="30,20,33,20" Width="96"/>
+            <Label Content="Schools" Grid.Row="1" FontWeight="Bold" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Margin="31,16,19,9" Width="56"/>
             <TextBlock Text="3 euros by student" Grid.Column="5" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Margin="15,20,0,20" Width="112" Grid.ColumnSpan="2"/>
-            <TextBlock Text="/" Grid.Column="5" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Margin="51,20,52,20" Width="4"/>
-            <Label Content="Weeks except Wednesday" FontWeight="Bold" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Width="155" Margin="1,17,0,13" Grid.Column="1"/>
-            <Label Content="Weekend and Wednesday" FontWeight="Bold" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Margin="1,19,0,11" Width="155" Grid.Column="1"/>
+            <TextBlock Text="/" Grid.Column="5" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Margin="51,20" Width="4"/>
+            <Label Content="Weeks except Wednesday" FontWeight="Bold" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Width="154" Margin="1,17,0,13" Grid.Column="1"/>
+            <Label Content="Weekend and Wednesday" FontWeight="Bold" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Margin="1,19,0,11" Width="154" Grid.Column="1"/>
 
             <StackPanel Grid.Row="4" Grid.ColumnSpan="6">
-                <Label Content="Schedule" Grid.Row="4" Grid.ColumnSpan="2" FontSize="18"  FontWeight="Bold" />
-                <Separator VerticalAlignment="Bottom" Grid.ColumnSpan="7" Margin="0,5,0,0"/>
+                <Label Content="Schedule" Grid.Row="4" Grid.ColumnSpan="2" FontSize="25"  FontWeight="Bold" Style="{StaticResource TitleStyle}"/>
+                <Separator VerticalAlignment="Bottom" Grid.ColumnSpan="7" Margin="0,5,0,0" Height="6"/>
                 <TextBlock Grid.Row="4" Margin="20,5,239,5" VerticalAlignment="Center">The Wild circus is open from Tuesday to Saturday from 11 am to 10 pm.</TextBlock>
             </StackPanel>
 

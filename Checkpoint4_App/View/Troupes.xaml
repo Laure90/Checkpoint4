@@ -8,6 +8,12 @@
         mc:Ignorable="d"
         Title="Troupes" Height="500" Width="800" Background="Beige">
     <Grid>
+        <Grid.Resources>
+            <Style x:Key="TitleStyle">
+                <Setter Property="TextBlock.FontFamily" Value="Amatic SC"/>
+                <Setter Property="TextBlock.FontWeight" Value="Bold"/>
+            </Style>
+        </Grid.Resources>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="17*"/>
             <ColumnDefinition Width="247*"/>
@@ -30,8 +36,8 @@
             </TextBlock>
         </StackPanel>
         <StackPanel Grid.Column="1">
-            <Label Content="Wild Circus" FontSize="50" HorizontalContentAlignment="Center" Grid.Row="0" Grid.RowSpan="2" Grid.Column="1"/>
-            <Label Content="Presentation of our troupes" FontSize="20" HorizontalContentAlignment="Center" Grid.Row="0"/>
+            <Label Content="Wild Circus" FontSize="60" HorizontalContentAlignment="Center" Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Style="{StaticResource TitleStyle}"/>
+            <Label Content="Presentation of our troupes" FontSize="30" HorizontalContentAlignment="Center" Grid.Row="0" Style="{StaticResource TitleStyle}"/>
         </StackPanel>
         <Grid Grid.Column="1" Grid.Row="1" Margin="40,5,40,5">
             <StackPanel Margin="15,5,423,177">
@@ -39,6 +45,7 @@
                 <ComboBox x:Name="TroupeNameComboBox" Margin="0,0,21,0" />
             </StackPanel>
             <Button x:Name="DisplayInfo" Content="Display" Click="DisplayInfo_Click" Margin="243,30,288,216"/>
+            <Button x:Name="Reset" Content="Reset" Click="Reset_Click" Margin="392,28,149,216"/>
             <TextBox x:Name="InfoTroupe" Margin="15,71,24,10" ScrollViewer.VerticalScrollBarVisibility="Visible"/>
         </Grid>
     </Grid>

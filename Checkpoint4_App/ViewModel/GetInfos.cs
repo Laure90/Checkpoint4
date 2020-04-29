@@ -124,5 +124,16 @@ namespace Checkpoint4_App
                 return infoTroupe;
             }
         }
+
+        public static List<Calendar> GetCalendarShowByTroupe(string nameTroupe)
+        {
+            using (var context = new CircusContext())
+            {
+                var infoTroupe = (from t in context.Troupes
+                                  where t.NameTroupe == nameTroupe
+                                  select t.CalendarShow).ToList();
+                return infoTroupe;
+            }
+        }
     }
 }

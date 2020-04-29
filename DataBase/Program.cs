@@ -12,8 +12,8 @@ namespace DataBase
     {
         static void Main(string[] args)
         {
-            GetHost();
-            /*
+            //GetHost();
+            
             using (var context = new CircusContext())
             {
                 context.Database.EnsureDeleted();
@@ -71,7 +71,7 @@ namespace DataBase
                 };
 
                 List<Show> show2List = new List<Show>();
-                show1List.Add(show2);
+                show2List.Add(show2);
 
                 troupe2.ShowsList = show2List;
                 troupe2.ShowType = show2.ShowType;
@@ -143,7 +143,7 @@ namespace DataBase
                 context.Add(tickets1);
                 context.Add(tickets2);
                 context.SaveChanges();
-            }*/
+            }
         }
 
         public static void GetHost()

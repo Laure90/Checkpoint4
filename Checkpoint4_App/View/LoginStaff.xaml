@@ -7,11 +7,17 @@
         mc:Ignorable="d"
          Title="LoginStaff Page" Height="450" Width="750" Background="Beige" >
     <Grid>
+        <Grid.Resources>
+            <Style x:Key="TitleStyle">
+                <Setter Property="TextBlock.FontFamily" Value="Amatic SC"/>
+                <Setter Property="TextBlock.FontWeight" Value="Bold"/>
+            </Style>
+        </Grid.Resources>
         <Image Source="https://www.objectif-mars-editions.com/wp-content/uploads/2019/11/machine-sous-wild-ciircus.jpg" />
         <StackPanel Margin="219,65,218,55" Background="IndianRed">
-            <Label Content="WELCOME !" HorizontalAlignment="Center" FontSize="20" Foreground="#FFFBFBFB" Margin="0,10,0,0"/>
-            <Label Content="Enter your professional identifiers" HorizontalAlignment="Center" FontSize="15" Foreground="#FFFBFBFB"/>
-            <Separator Height="7"/>
+            <Label Content="WELCOME !" HorizontalAlignment="Center" FontSize="30" Foreground="#FFFBFBFB" Margin="0,10,0,0" Style="{StaticResource TitleStyle}"/>
+            <Label Content="Enter your professional identifiers" HorizontalAlignment="Center" FontSize="20" Foreground="#FFFBFBFB" Style="{StaticResource TitleStyle}"/>
+            <Separator Height="11"/>
             <Label Content="User name" HorizontalAlignment="Left" FontSize="15" Foreground="#FFFBFBFB" Margin="5"/>
             <TextBox Name="UserNameTextBox" Height="25" Margin="10,5,10,5"></TextBox>
             <Label Content="Password" HorizontalAlignment="Left" FontSize="15" Foreground="#FFFBFBFB" Margin="5"/>

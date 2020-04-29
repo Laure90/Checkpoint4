@@ -1,17 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace Checkpoint4_App
 {
@@ -26,7 +18,6 @@ namespace Checkpoint4_App
             ShowNameComboBox.ItemsSource = shows;
 
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string show = ShowNameComboBox.Text;
@@ -71,6 +62,5 @@ namespace Checkpoint4_App
             Regex regex = new Regex("[^0-9]+");
             e.Handled = regex.IsMatch(e.Text);
         }
-
     }
 }

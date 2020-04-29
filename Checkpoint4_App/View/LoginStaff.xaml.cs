@@ -24,7 +24,7 @@ namespace Checkpoint4_App
         private void btnEnter_Click_1(object sender, RoutedEventArgs e)
         {
 
-            User newUser = new User { Name = UserNameTextBox.Text, Password = PasswordTextBox.Password };
+            User newUser = new User { Name = UserNameTextBox.Text, Password = Sha256Tools.GetHash(PasswordTextBox.Password) };
             if (Authentify(newUser))
             {
                 StaffOnly staffOnly = new StaffOnly();

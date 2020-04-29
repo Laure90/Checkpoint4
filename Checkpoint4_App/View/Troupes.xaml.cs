@@ -30,19 +30,29 @@ namespace Checkpoint4_App
             List<Troupe> listTroupe = GetInfos.ReturnTroupeData(troupe);
             foreach(Troupe tp in listTroupe)
             {
-                InfoTroupe.Text += "Name Troupe : " + tp.NameTroupe + "\nShow Type : " + tp.ShowType;                
+                InfoTroupe.Text += "Name Troupe : " + tp.NameTroupe + "\nShow Type : " + tp.ShowType ;                
             }
             List<MemberTroupe> memberList = GetInfos.GetMembersByTroupe(troupe);
             foreach (MemberTroupe mb in memberList)
             {
                 InfoTroupe.Text += "\nMember Name : " + mb.Name;
             }
-            List<Show> showList = GetInfos.GetShowByTroupeName(troupe);
-           
+            List<Show> showList = GetInfos.GetShowByTroupeName(troupe);           
             foreach (Show sh in showList)
             {
-                InfoTroupe.Text += "\nShow Name : " + sh.ShowName;
+                InfoTroupe.Text += "\nShow Name : " + sh.ShowName + "\nDescription of the show : " + sh.Description;
             }
+            List<Calendar> showTime = GetInfos.GetCalendarShowByTroupe(troupe);
+            foreach(Calendar cd in showTime)
+            {
+                InfoTroupe.Text += "\nDays of show : " + cd.ShowDay + "\nTime : " + cd.Hour + "\n";
+            }
+        }
+
+        private void Reset_Click(object sender, RoutedEventArgs e)
+        {
+            TroupeNameComboBox.Text = String.Empty;
+            InfoTroupe.Text = String.Empty;
         }
     }
 }

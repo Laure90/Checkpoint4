@@ -44,7 +44,7 @@ namespace DataBase
             {
                 var user = new User();
                 user.Name = name;
-                user.Password = ComputeHash(password, new SHA256CryptoServiceProvider()); ;
+                user.Password = password;
                 user.StaffMember = false;
                 context.Users.AddRange(user);
                 context.SaveChanges();
@@ -67,13 +67,6 @@ namespace DataBase
             }
         }
 
-        public string ComputeHash(string input, HashAlgorithm algorithm)
-        {
-            Byte[] inputBytes = Encoding.UTF8.GetBytes(input);
-
-            Byte[] hashedBytes = algorithm.ComputeHash(inputBytes);
-
-            return BitConverter.ToString(hashedBytes);
-        }
+        
     }
 }

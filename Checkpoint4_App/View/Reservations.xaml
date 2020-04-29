@@ -1,0 +1,56 @@
+﻿<Window x:Class="Checkpoint4_App.Reservations"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Checkpoint4_App"
+        mc:Ignorable="d"
+        Title="Reservations" Height="450" Width="800" Background="Beige">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="247*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="121*"/>
+            <RowDefinition Height="221*"/>
+            <RowDefinition Height="77*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.RowSpan ="3">
+            <TextBlock Background="IndianRed" Height="421" >
+                <StackPanel>
+                    <Button x:Name="Home_btn" Background="Transparent" BorderThickness="0" ><Image Source="ressources/Icons/home2.png" Width="40"/></Button>
+                    <Button x:Name="Troupe_btn" Background="Transparent" BorderThickness="0" ><Image Source="ressources/Icons/troupe.png" Width="40"/></Button>
+                    <Button x:Name="Calendar_btn" Background="Transparent" BorderThickness="0" ><Image Source="ressources/Icons/calendar.png" Width="40"/></Button>
+                    <Button x:Name="Prices_btn" Background="Transparent" BorderThickness="0" ><Image Source="ressources/Icons/prices.png" Width="40"/></Button>
+                    <Button x:Name="Reservation_btn" Background="Transparent" BorderThickness="0,0,5,0" BorderBrush="Beige"> <Image Source="ressources/Icons/reservation.png" Width="40"/></Button>
+                    <Button x:Name="Staff_btn" Background="Transparent" BorderThickness="0"><Image Source="ressources/Icons/staff.png" Width="40"/></Button>            
+                </StackPanel>
+            </TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <Label Content="Wild Circus" FontSize="50" HorizontalContentAlignment="Center" Grid.Row="0" Grid.RowSpan="2" Grid.Column="1"/>
+            <Label Content="Ticket Reservations" FontSize="20" HorizontalContentAlignment="Center" Grid.Row="0"/>
+        </StackPanel>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Label Content="Choose a show you want to attend :"/>
+            <ComboBox Margin="208,0,393,194" Name="ShowNameComboBox"/>
+            <Button x:Name="Display" Content="Available places" Click="Display_Click" Margin="364,0,271,194"/>
+            <Label Content="Remaining places : " Margin="480,0,140,180" Height="41" VerticalAlignment="Bottom"/>
+            <TextBlock x:Name="RemainingPlacesTextBox" Background="White" Margin="606,6,21,194" RenderTransformOrigin="0.394,1.406"/>
+            <Label Content="Price : " Margin="0,48,674,141" RenderTransformOrigin="0.5,0.5"/>
+            <TextBox x:Name="priceTextBox" Text="7" Margin="150,48,481,146" Background="White" IsReadOnly="True"/>
+            <TextBlock Margin="265,53,431,146">Euros</TextBlock>
+            <Label Content="Number of reservation : " Margin="0,96,596,98"/>
+            <TextBox x:Name="NumberTicketBox" Margin="150,96,481,98" BorderThickness="0" IsReadOnly="False" PreviewTextInput="NumberValidationTextBox"/>
+            <Label Content="Total : " Margin="0,173,649,21"/>
+            <TextBox x:Name="TotalTextBox" Margin="150,173,481,21" Background="White" IsReadOnly="True"/>
+            <Button Content="Confirm" Margin="150,135,481,59" Click="Button_Click"/>
+            <Grid Margin="382,48,39,0" Background="GhostWhite">
+                <Label Content="Means of payment" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Height="47" Margin="68,0" VerticalAlignment="Top"/>
+                <Image Source="https://www.aroeven.fr/sites/default/files/upload/paiement_securise_grande_3765de50-b3f4-45b2-8f23-4fbc4e5ed76b_large_copie_0.png" Margin="5,24,5,-4"/>
+            </Grid>
+            <Button Content="Pay" Margin="547,243,59,-51"/>
+        </Grid>
+    </Grid>
+</Window>

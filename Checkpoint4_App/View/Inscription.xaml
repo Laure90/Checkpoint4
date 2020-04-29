@@ -1,0 +1,22 @@
+﻿<Window x:Class="Checkpoint4_App.Inscription"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Checkpoint4_App"
+        mc:Ignorable="d"
+        Title="Inscription" Height="450" Width="750" Background="Beige">
+    <Grid>
+        <Image Source="https://www.objectif-mars-editions.com/wp-content/uploads/2019/11/machine-sous-wild-ciircus.jpg" />
+        <StackPanel Margin="95,70,95,55" Background="IndianRed">
+            <Label Content="WELCOME !" HorizontalAlignment="Center" FontSize="20" Foreground="#FFFBFBFB" Margin="0,10,5,0"/>
+            <Separator/>
+            <Label Content="User name" HorizontalAlignment="Left" FontSize="15" Foreground="#FFFBFBFB" Margin="5"/>
+            <TextBox Name="UserNameTextBox" Height="25" Margin="10,5,10,5"></TextBox>
+            <Label Content="Password" HorizontalAlignment="Left" FontSize="15" Foreground="#FFFBFBFB" Margin="5"/>
+            <PasswordBox Name="PasswordTextBox" Height="25" Margin="10,5,10,5"></PasswordBox>
+            <Button Name="Validate_btn" Content="Validate" Margin="190,10,190,10" Height="25" Background="#FFDAD7F9" Click="Validate_btn_Click"  IsDefault="true"/>
+            <Button x:Name="Close_btn" Content="Close" Click="Close_btn_Click" Margin="190,0" Height="27"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,53 @@
+﻿<Window x:Class="Checkpoint4_App.HomePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:HamburgerMenu="clr-namespace:HamburgerMenu;assembly=HamburgerMenu"
+        xmlns:local="clr-namespace:Checkpoint4_App"
+        mc:Ignorable="d"
+        Title="Home Page" Height="450" Width="800" Background="Beige" x:Name="this_">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="247*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="78*"/>
+            <RowDefinition Height="270*"/>
+            <RowDefinition Height="78*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.RowSpan ="3">
+            <TextBlock Background="IndianRed" Height="421" >
+                <StackPanel>
+                    <Button x:Name="Home_btn" Background="Transparent" BorderThickness="0,0,5,0" BorderBrush="Beige" Click="Home_btn_Click"><Image Source="ressources/Icons/home2.png" Width="40"/></Button>
+                    <Button x:Name="Troupe_btn" Background="Transparent" BorderThickness="0" Click="Troupe_btn_Click"><Image Source="ressources/Icons/troupe.png" Width="40"/></Button>
+                    <Button x:Name="Calendar_btn" Background="Transparent" BorderThickness="0" Click="Calendar_btn_Click"><Image Source="ressources/Icons/calendar.png" Width="40"/></Button>
+                    <Button x:Name="Prices_btn" Background="Transparent" BorderThickness="0" Click="Prices_btn_Click"><Image Source="ressources/Icons/prices.png" Width="40"/></Button>
+                    <Button x:Name="Reservation_btn" Background="Transparent" BorderThickness="0" Click="Reservation_btn_Click"> <Image Source="ressources/Icons/reservation.png" Width="40"/></Button>
+                    <Button x:Name="Staff_btn" Background="Transparent" BorderThickness="0" Click="Staff_btn_Click"><Image Source="ressources/Icons/staff.png" Width="40"/></Button>            
+                </StackPanel>
+            </TextBlock>
+        </StackPanel>
+
+        <Label Content="Wild Circus" FontSize="50" HorizontalContentAlignment="Center" Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" Margin="0,0,0,0.282"/>
+        <StackPanel Grid.Row="1" Margin="119,0,118,0.282" Grid.Column="1">
+            <TextBlock TextBlock.TextAlignment="Center" Padding="50,0,50,0" TextWrapping="Wrap" Margin="0,30,0,10">Welcome to the Wild Circus Apps !</TextBlock>
+            <TextBlock TextBlock.TextAlignment="Center" Padding="50,0,50,0" TextWrapping="Wrap">Thanks to this application, you can learn more 
+            about the different troupes on show, you can look at the prices and times of the different shows as well as make reservations !</TextBlock>
+            <TextBlock FontSize="16" TextBlock.TextAlignment="Center" Padding="50,10,50,0" TextWrapping="Wrap" FontWeight="Bold" Margin="32,0,38,0">To celebrate the arrival of our new application, all seats are at 7 euros for two weeks!</TextBlock>
+            <TextBlock FontSize="18" TextBlock.TextAlignment="Center" Padding="50,20,50,0" TextWrapping="Wrap" FontWeight="Bold">ENJOY !!</TextBlock>
+        </StackPanel>
+        <Image Source="https://webstockreview.net/images/circus-clipart-manager.gif" RenderTransformOrigin="0.62,2.154" Margin="528,99,-1,0.563" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1"/>
+        <Image Source="https://webstockreview.net/images/circus-clipart-manager.gif" Margin="-9,95,580,3.563" Grid.Row="1" RenderTransformOrigin="0.62,2.154" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+    </Grid>
+</Window>

@@ -1,0 +1,79 @@
+﻿<Window x:Class="Checkpoint4_App.PricesSchedule"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:HamburgerMenu="clr-namespace:HamburgerMenu;assembly=HamburgerMenu"
+        xmlns:local="clr-namespace:Checkpoint4_App"
+        mc:Ignorable="d"
+        Title="Prices and Schedule" Height="500" Width="800" Background="Beige">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="247*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="134*"/>
+            <RowDefinition Height="279*"/>
+            <RowDefinition Height="56*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Column="1">
+            <Label Content="Wild Circus" FontSize="50" HorizontalContentAlignment="Center" Grid.Row="0" Grid.RowSpan="2" Grid.Column="1"/>
+            <Label Content="Prices and Schedule" FontSize="20" HorizontalContentAlignment="Center" Grid.Row="0"/>
+        </StackPanel>
+        <StackPanel Grid.RowSpan ="3">
+            <TextBlock Background="IndianRed" Height="472" >
+                <StackPanel>
+                    <Button x:Name="Home_btn" Background="Transparent" ><Image Source="ressources/Icons/home2.png" Width="40"/></Button>
+                    <Button x:Name="Troupe_btn" Background="Transparent" BorderThickness="0" ><Image Source="ressources/Icons/troupe.png" Width="40"/></Button>
+                    <Button x:Name="Calendar_btn" Background="Transparent" BorderThickness="0" ><Image Source="ressources/Icons/calendar.png" Width="40"/></Button>
+                    <Button x:Name="Prices_btn" Background="Transparent" BorderThickness="0,0,5,0" BorderBrush="Beige"><Image Source="ressources/Icons/prices.png" Width="40"/></Button>
+                    <Button x:Name="Reservation_btn" Background="Transparent" BorderThickness="0" > <Image Source="ressources/Icons/reservation.png" Width="40"/></Button>
+                    <Button x:Name="Staff_btn" Background="Transparent" BorderThickness="0" ><Image Source="ressources/Icons/staff.png" Width="40"/></Button>            
+                </StackPanel>
+            </TextBlock>
+        </StackPanel>
+        <Grid Margin="38,0,37,0" Grid.Row="1" Height="279" VerticalAlignment="Top" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="43*"/>
+                <ColumnDefinition Width="156*"/>
+                <ColumnDefinition Width="70*"/>
+                <ColumnDefinition Width="114*"/>
+                <ColumnDefinition Width="160*"/>
+                <ColumnDefinition Width="107*"/>
+                <ColumnDefinition Width="21*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="34*"/>
+                <RowDefinition Height="57*"/>
+                <RowDefinition Height="56*"/>
+                <RowDefinition Height="56*"/>
+                <RowDefinition Height="76*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Prices" FontWeight="Bold" Grid.ColumnSpan="2" FontSize="18"/>
+            <Separator VerticalAlignment="Bottom" Grid.ColumnSpan="7" Margin="0,5,0,0"/>
+            <Label Content="Adults" FontWeight="Bold" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Margin="3,19,13,12" Width="54"/>
+            <TextBlock Text="10 euros" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Margin="11,20,13,20" Width="46"/>
+            <TextBlock Text="15 euros" Grid.Column="2" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Margin="11,20,13,20" Width="46"/>
+            <Label Content="Children under 12" FontWeight="Bold" Grid.Row="1" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Margin="0,19,0,12" Width="114"/>
+            <TextBlock Text="5 euros" Grid.Column="3" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Margin="37,20" Width="40"/>
+            <TextBlock Text="6 euros" Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Margin="37,20" Width="40"/>
+            <TextBlock Text="Groups (more than 10 people)" TextBlock.TextAlignment="Center" TextWrapping="Wrap" FontWeight="Bold" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center" Height="47" Margin="0,10,0,0" Width="160"/>
+            <TextBlock Text="7 euros by person" Grid.Column="4" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Margin="31,20,33,20" Width="96"/>
+            <TextBlock Text="8 euros by person" Grid.Column="4" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Margin="31,20,33,20" Width="96"/>
+            <Label Content="Schools" Grid.Row="1" FontWeight="Bold" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Margin="31,19,20,12" Width="56"/>
+            <TextBlock Text="3 euros by student" Grid.Column="5" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Margin="15,20,0,20" Width="112" Grid.ColumnSpan="2"/>
+            <TextBlock Text="/" Grid.Column="5" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16" Margin="51,20,52,20" Width="4"/>
+            <Label Content="Weeks except Wednesday" FontWeight="Bold" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Width="155" Margin="1,17,0,13" Grid.Column="1"/>
+            <Label Content="Weekend and Wednesday" FontWeight="Bold" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Margin="1,19,0,11" Width="155" Grid.Column="1"/>
+
+            <StackPanel Grid.Row="4" Grid.ColumnSpan="6">
+                <Label Content="Schedule" Grid.Row="4" Grid.ColumnSpan="2" FontSize="18"  FontWeight="Bold" />
+                <Separator VerticalAlignment="Bottom" Grid.ColumnSpan="7" Margin="0,5,0,0"/>
+                <TextBlock Grid.Row="4" Margin="20,5,239,5" VerticalAlignment="Center">The Wild circus is open from Tuesday to Saturday from 11 am to 10 pm.</TextBlock>
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</Window>

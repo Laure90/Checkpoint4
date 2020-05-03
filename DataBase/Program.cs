@@ -12,8 +12,9 @@ namespace DataBase
     {
         static void Main(string[] args)
         {
-            //GetHost();
             
+
+            Console.WriteLine("Start creation of the database");
             using (var context = new CircusContext())
             {
                 context.Database.EnsureDeleted();
@@ -143,6 +144,9 @@ namespace DataBase
                 context.Add(tickets1);
                 context.Add(tickets2);
                 context.SaveChanges();
+
+                Console.WriteLine("End of the database creation");
+                GetHost();
             }
         }
 

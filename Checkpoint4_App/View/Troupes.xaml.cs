@@ -42,11 +42,6 @@ namespace Checkpoint4_App
             {
                 InfoTroupe.Text += "\nShow Name : " + sh.ShowName + "\nDescription of the show : " + sh.Description;
             }
-            List<Calendar> showTime = GetInfos.GetCalendarShowByTroupe(troupe);
-            foreach(Calendar cd in showTime)
-            {
-                InfoTroupe.Text += "\nDays of show : " + cd.ShowDay + "\nTime : " + cd.Hour + "\n";
-            }
         }
 
         private void Reset_Click(object sender, RoutedEventArgs e)
